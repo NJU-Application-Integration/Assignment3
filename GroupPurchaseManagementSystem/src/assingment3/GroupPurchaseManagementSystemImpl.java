@@ -1,23 +1,22 @@
 /** <a href="http://www.cpupk.com/decompiler">Eclipse Class Decompiler</a> plugin, Copyright (c) 2017 Chen Chao. **/
-package assingment3;
+package assignment3;
 
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.rmi.server.UnicastRemoteObject;
 
 import javax.xml.ws.Endpoint;
 
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 
+import assingment3.BankSystem;
 
-import assignment3.ShortMessageSender;
-
-
-class GroupPurchaseManagementSystemImpl
+class GroupPurchaseManagementSystemImpl extends UnicastRemoteObject
 		implements
 			GroupPurchaseManagementSystem {
+	private static final long serialVersionUID = -645960813211232810L;
 	private ShortMessageSender shortMessageSender;
 	private BankSystem bankSystem;
 	private List<GroupPurchaseItem> groupPurchaseItems;
@@ -30,7 +29,7 @@ class GroupPurchaseManagementSystemImpl
 	private static final String SYSTEM_BANK_PASS = "123";
 
 	public GroupPurchaseManagementSystemImpl(
-			ShortMessageSender shortMessageSender, BankSystem bankSystem) {
+			ShortMessageSender shortMessageSender, BankSystem bankSystem) throws java.rmi.RemoteException  {
 		this.shortMessageSender = shortMessageSender;
 		this.bankSystem = bankSystem;
 		this.groupPurchaseItems = new ArrayList();
@@ -46,12 +45,12 @@ class GroupPurchaseManagementSystemImpl
 		}
 	}
 
-	public List<GroupPurchaseItem> listGroupPurchase() {
+	public List<GroupPurchaseItem> listGroupPurchase() throws java.rmi.RemoteException {
 		return this.groupPurchaseItems;
 	}
 
 	public boolean submitPurchase(String itemId, String bankAccount,
-			String password, String phone) {
+			String password, String phone) throws java.rmi.RemoteException {
 		if ((itemId == null) || (itemId.isEmpty())) {
 			System.out.println("submitPurchase: Empty item id!");
 			return false;
@@ -106,7 +105,7 @@ class GroupPurchaseManagementSystemImpl
 	}
 
 	public boolean publishGroupPurchaseItem(String sellerSecretKey,
-			String productName, String introduction, double price, int limit) {
+			String productName, String introduction, double price, int limit) throws java.rmi.RemoteException  {
 		if ((sellerSecretKey == null)
 				|| (!(sellerLookup.containsKey(sellerSecretKey)))) {
 			System.out
@@ -145,7 +144,7 @@ class GroupPurchaseManagementSystemImpl
 		return true;
 	}
 
-	public boolean confirmPurchase(String sellerSecretKey, String confirm) {
+	public boolean confirmPurchase(String sellerSecretKey, String confirm) throws java.rmi.RemoteException  {
 		if ((sellerSecretKey == null)
 				|| (!(sellerLookup.containsKey(sellerSecretKey)))) {
 			System.out
