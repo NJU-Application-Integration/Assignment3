@@ -1,7 +1,6 @@
 package com.nju.groupPurchaseManagementSystem;
 
 import com.nju.groupPurchaseManagementSystem.bankSystemMQ.TransferMessageSender;
-import com.nju.groupPurchaseManagementSystem.purchaseRMI.GroupPurchaseManagementSystemFactory;
 import com.nju.groupPurchaseManagementSystem.smsService.ShortMessageSender;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 import org.junit.Test;
