@@ -1,0 +1,28 @@
+﻿Build started 2017/6/22 23:40:58.
+     1>Project "E:\MyCoding\GroupPurchaseSystem\BankSystem\BankSystem\BankSystem.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\BankSystem.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         E:\IDE\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IE:\JAVA\jdk1.8_32bit\include /IE:\JAVA\jdk1.8_32bit\include\win32 /Zi /nologo /W3 /WX- /Od /Oy- /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt BankSystemJNI.cpp
+         BankSystemJNI.cpp
+       Link:
+         E:\IDE\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\MyCoding\GroupPurchaseSystem\BankSystem\Debug\BankSystem.dll" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\BankSystem.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\MyCoding\GroupPurchaseSystem\BankSystem\Debug\BankSystem.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\MyCoding\GroupPurchaseSystem\BankSystem\Debug\BankSystem.lib" /MACHINE:X86 /DLL Debug\BankSystemJNI.obj
+         Debug\Main.obj
+         BankSystem_vc10_md.lib
+         BankSystem_vc10_mdd.lib
+         BankSystem_vc10_mt.lib
+         BankSystem_vc10_mtd.lib
+         LINK : E:\MyCoding\GroupPurchaseSystem\BankSystem\Debug\BankSystem.dll not found or not built by the last incremental link; performing full link
+            Creating library E:\MyCoding\GroupPurchaseSystem\BankSystem\Debug\BankSystem.lib and object E:\MyCoding\GroupPurchaseSystem\BankSystem\Debug\BankSystem.exp
+     1>BankSystem_vc10_md.lib(BankSystem.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'BankSystem_vc10_md.lib(BankSystem.obj)' or at 'E:\MyCoding\GroupPurchaseSystem\BankSystem\Debug\vc100.pdb'; linking object as if no debug info
+         BankSystem.vcxproj -> E:\MyCoding\GroupPurchaseSystem\BankSystem\Debug\BankSystem.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\MyCoding\GroupPurchaseSystem\BankSystem\Debug\BankSystem.dll;#2" /manifest Debug\BankSystem.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\BankSystem.unsuccessfulbuild".
+         Touching "Debug\BankSystem.lastbuildstate".
+     1>Done Building Project "E:\MyCoding\GroupPurchaseSystem\BankSystem\BankSystem\BankSystem.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.90
