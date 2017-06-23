@@ -1,7 +1,10 @@
 /** <a href="http://www.cpupk.com/decompiler">Eclipse Class Decompiler</a> plugin, Copyright (c) 2017 Chen Chao. **/
-package assingment3;
+package assignment3;
 
-public class GroupPurchaseItem {
+import java.io.Serializable;
+
+public class GroupPurchaseItem implements Serializable {
+	private static final long serialVersionUID = -4801444555698503024L;
 	private String id;
 	private String seller;
 	private String productName;
