@@ -1,8 +1,5 @@
 package assignment3;
 
-import com.nju.groupPurchaseManagementSystem.core.vo.GroupPurchaseItem;
-import org.springframework.context.annotation.ComponentScan;
-
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;

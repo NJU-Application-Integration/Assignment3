@@ -1,5 +1,6 @@
 package com.nju.groupPurchaseManagementSystem.core;
 
+import assignment3.GroupPurchaseItem;
 import com.nju.groupPurchaseManagementSystem.ConfigInfos;
 import com.nju.groupPurchaseManagementSystem.bankSystemMQ.TransferMessageSender;
 import com.nju.groupPurchaseManagementSystem.core.vo.*;
@@ -51,6 +52,8 @@ public class GroupPurchaseCoreImpl implements GroupPurchaseCore {
             sellerLookup.put("_seller_a_s3cret_k3y", "Seller A");
             sellerBankAccount.put("_seller_a_s3cret_k3y", "seller");
         }
+        publishGroupPurchaseItem("_seller_a_s3cret_k3y", "p1",
+                "introduction", 100, 1);
     }
 
     public List<GroupPurchaseItem> listGroupPurchase()

@@ -14,6 +14,7 @@ public class RmiClient {
 		try {
 			GroupPurchaseManagementSystem gpms = (GroupPurchaseManagementSystem) Naming
 					.lookup("rmi://192.168.1.112:1099/rmiService");
+			System.out.println(gpms.listGroupPurchase().get(0).getProductName());
 			return gpms;
 		} catch (MalformedURLException murle) {
 			System.out.println();

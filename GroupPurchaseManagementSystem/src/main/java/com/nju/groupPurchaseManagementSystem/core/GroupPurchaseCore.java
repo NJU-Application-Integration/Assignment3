@@ -1,6 +1,6 @@
 package com.nju.groupPurchaseManagementSystem.core;
 
-import com.nju.groupPurchaseManagementSystem.core.vo.GroupPurchaseItem;
+import assignment3.GroupPurchaseItem;
 
 import java.util.List;
 

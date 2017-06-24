@@ -2,10 +2,12 @@ package com.nju.groupPurchaseManagementSystem.purchaseRMI;
 
 import assignment3.GroupPurchaseManagementSystem;
 import com.nju.groupPurchaseManagementSystem.core.GroupPurchaseCore;
-import com.nju.groupPurchaseManagementSystem.core.vo.GroupPurchaseItem;
+import assignment3.GroupPurchaseItem;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
 
 /**

@@ -1,4 +1,4 @@
-package com.nju.groupPurchaseManagementSystem.core.vo;
+package assignment3;
 
 import java.io.Serializable;
 

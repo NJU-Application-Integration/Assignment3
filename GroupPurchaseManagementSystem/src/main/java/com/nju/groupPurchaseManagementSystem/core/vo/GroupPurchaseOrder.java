@@ -1,5 +1,7 @@
 package com.nju.groupPurchaseManagementSystem.core.vo;
 
+import assignment3.GroupPurchaseItem;
+
 /**
  * Created by Srf on 2017/6/23
  */

@@ -88,7 +88,7 @@ import javax.swing.LayoutStyle;
 /*     */       }
 /*     */     });
 /*  56 */     this.messageTimer.setRepeats(false);
-/*  57 */     int busyAnimationRate = resourceMap.getInteger("StatusBar.busyAnimationRate").intValue();
+/*  57 */     int busyAnimationRate = resourceMap.getInteger("StatusBar.busyAnimationRate");
 /*  58 */     for (int i = 0; i < this.busyIcons.length; i++) {
 /*  59 */       this.busyIcons[i] = resourceMap.getIcon("StatusBar.busyIcons[" + i + "]");
 /*     */     }
@@ -268,13 +268,13 @@ import javax.swing.LayoutStyle;
 /*     */     public ListItem(GroupPurchaseItem item) {
 /* 299 */       this.item = item;
 /*     */     }
-public ListItem(GroupPurchaseWebView groupPurchaseWebView, GroupPurchaseItem groupPurchaseItem) {
-	// TODO Auto-generated constructor stub
+				public ListItem(GroupPurchaseWebView groupPurchaseWebView, GroupPurchaseItem groupPurchaseItem) {
+					this.item = groupPurchaseItem;
 }
 /*     */ 
 /*     */     public String toString()
 /*     */     {
-/* 304 */       return String.format("%s (%.2f) %s", new Object[] { this.item.getProductName(), Double.valueOf(this.item.getPrice()), this.item.getIntroduction() });
+/* 304 */       return String.format("%s (%.2f) %s", this.item.getProductName(), this.item.getPrice(), this.item.getIntroduction());
 /*     */     }
 /*     */   }
 /*     */ }
