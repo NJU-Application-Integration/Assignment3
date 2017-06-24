@@ -1,7 +1,7 @@
 package com.nju.groupPurchaseManagementSystem.ratailCorba;
 
-import org.omg.CORBA.ORB;
 import org.springframework.stereotype.Component;
+import org.omg.CORBA.*;
 
 /**
  * Created by Srf on 2017/6/24
@@ -9,5 +9,6 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CorbaServer {
+
 
 }
