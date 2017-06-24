@@ -42,7 +42,7 @@ public class GroupPurchaseManagementSystemApplicationTests {
 		core.publishGroupPurchaseItem("_seller_a_s3cret_k3y", "p1", "introduction", 100, 1);
 		String id = core.listGroupPurchase().get(0).getId();
 		System.out.println(core.listGroupPurchase().get(0).getProductName());
-		core.submitPurchase(id, "buyer", "123", "1234567890");
+		//core.submitPurchase(id, "buyer", "123", "1234567890");
 	}
 
 }

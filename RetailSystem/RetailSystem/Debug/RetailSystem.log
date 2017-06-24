@@ -1,0 +1,16 @@
+﻿Build started 2017/6/25 0:19:27.
+     1>Project "E:\MyCoding\Assignment3\RetailSystem\RetailSystem\RetailSystem.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\RetailSystem.unsuccessfulbuild".
+       ClCompile:
+         E:\IDE\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Client.cpp RSCorba.cpp
+         RSCorba.cpp
+     1>e:\ide\vs\omniorb-4.1.5\include\omniorb4\corba_sysdep_trad.h(606): fatal error C1189: #error :  "The byte order of this platform is unknown"
+         Client.cpp
+     1>e:\ide\vs\omniorb-4.1.5\include\omniorb4\corba_sysdep_trad.h(606): fatal error C1189: #error :  "The byte order of this platform is unknown"
+         Generating Code...
+     1>Done Building Project "E:\MyCoding\Assignment3\RetailSystem\RetailSystem\RetailSystem.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.45

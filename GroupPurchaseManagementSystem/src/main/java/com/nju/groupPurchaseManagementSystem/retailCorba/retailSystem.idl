@@ -1,0 +1,11 @@
+module rsInterface{
+
+    interface RetailSystemService{
+
+        boolean confirmPurchase(in string sk, in string confirmCode);
+
+        boolean publishGroupPurchaseItem(in string sk, in string productName, in string introduction, in double price, in long limit);
+
+    };
+
+};

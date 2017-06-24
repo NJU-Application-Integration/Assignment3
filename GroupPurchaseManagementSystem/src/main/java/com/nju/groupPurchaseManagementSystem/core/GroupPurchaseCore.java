@@ -10,12 +10,12 @@ import java.util.List;
 
 public interface GroupPurchaseCore {
 
-    public boolean confirmPurchase(String paramString1, String paramString2);
+    boolean confirmPurchase(String paramString1, String paramString2);
 
-    public List<GroupPurchaseItem> listGroupPurchase();
+    List<GroupPurchaseItem> listGroupPurchase();
 
-    public boolean publishGroupPurchaseItem(String paramString1, String paramString2, String paramString3, double paramDouble, int paramInt);
+    boolean publishGroupPurchaseItem(String paramString1, String paramString2, String paramString3, double paramDouble, int paramInt);
 
-    public boolean submitPurchase(String paramString1, String paramString2, String paramString3, String paramString4);
+    boolean submitPurchase(String paramString1, String paramString2, String paramString3, String paramString4);
 
 }
