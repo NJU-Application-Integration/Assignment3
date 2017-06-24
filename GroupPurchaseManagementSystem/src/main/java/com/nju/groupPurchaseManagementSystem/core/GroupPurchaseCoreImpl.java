@@ -38,6 +38,7 @@ public class GroupPurchaseCoreImpl implements GroupPurchaseCore {
         factoryBean.setServiceClass(ShortMessageSender.class);
         factoryBean.setAddress(ConfigInfos.SMSAddress);
         this.shortMessageSender = (ShortMessageSender)factoryBean.create();
+        System.out.println("SMS start");
         this.groupPurchaseItems = new ArrayList<>();
         this.groupPurchaseOrders = new HashMap<>();
         this.groupPurchaseItemLookup = new HashMap<>();

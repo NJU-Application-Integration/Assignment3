@@ -7,4 +7,8 @@ public class ConfigInfos {
 
     public static String SMSAddress = "http://localhost:8080/SMSender";
 
+    public static String rmiServiceName = "rmiService";
+
+    public static int rmiPort = 1099;
+
 }
