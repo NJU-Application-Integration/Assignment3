@@ -1,8 +1,4 @@
 package assignment3;
-import java.rmi.RemoteException;
-
-import assignment3.GroupPurchaseManagementSystem;
-import assignment3.GroupPurchaseManagementSystemImpl;
 
 public class Main {
 

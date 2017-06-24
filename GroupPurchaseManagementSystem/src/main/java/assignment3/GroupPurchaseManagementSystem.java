@@ -3,16 +3,18 @@ package assignment3;
 import com.nju.groupPurchaseManagementSystem.core.vo.GroupPurchaseItem;
 import org.springframework.context.annotation.ComponentScan;
 
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 import java.util.List;
 
 /**
  * Created by Srf on 2017/6/24
  */
 
-public interface GroupPurchaseManagementSystem {
+public interface GroupPurchaseManagementSystem extends Remote {
 
-    List<GroupPurchaseItem> listGroupPurchase ();
+    List<GroupPurchaseItem> listGroupPurchase () throws RemoteException;
 
-    boolean submitPurchase(String paramString1, String paramString2, String paramString3, String paramString4);
+    boolean submitPurchase(String paramString1, String paramString2, String paramString3, String paramString4) throws RemoteException;
 
 }

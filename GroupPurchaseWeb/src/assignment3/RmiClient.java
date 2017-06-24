@@ -13,7 +13,7 @@ public class RmiClient {
 	public GroupPurchaseManagementSystem getGroupPurchaseManagementSystem() {
 		try {
 			GroupPurchaseManagementSystem gpms = (GroupPurchaseManagementSystem) Naming
-					.lookup("rmi://127.0.0.1:6600/GroupPurchaseManagementSystemService");
+					.lookup("rmi://192.168.1.112:1099/rmiService");
 			return gpms;
 		} catch (MalformedURLException murle) {
 			System.out.println();

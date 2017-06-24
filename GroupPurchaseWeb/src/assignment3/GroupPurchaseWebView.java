@@ -80,7 +80,7 @@ import javax.swing.LayoutStyle;
 /*  45 */     updateList();
 /*     */ 
 /*  48 */     ResourceMap resourceMap = getResourceMap();
-/*  49 */     int messageTimeout = resourceMap.getInteger("StatusBar.messageTimeout").intValue();
+/*  49 */     int messageTimeout = resourceMap.getInteger("StatusBar.messageTimeout");
 /*  50 */     this.messageTimer = new Timer(messageTimeout, new ActionListener()
 /*     */     {
 /*     */       public void actionPerformed(ActionEvent e) {
