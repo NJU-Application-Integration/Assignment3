@@ -1,5 +1,6 @@
 package com.nju.groupPurchaseManagementSystem.purchaseRMI;
 
+import assignment3.GroupPurchaseManagementSystem;
 import com.nju.groupPurchaseManagementSystem.core.GroupPurchaseCore;
 import com.nju.groupPurchaseManagementSystem.core.vo.GroupPurchaseItem;
 import org.springframework.stereotype.Component;

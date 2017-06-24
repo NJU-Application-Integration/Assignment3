@@ -1,4 +1,4 @@
-package com.nju.groupPurchaseManagementSystem.purchaseRMI;
+package assignment3;
 
 import com.nju.groupPurchaseManagementSystem.core.vo.GroupPurchaseItem;
 

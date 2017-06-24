@@ -1,5 +1,6 @@
 package com.nju.groupPurchaseManagementSystem.purchaseRMI;
 
+import assignment3.GroupPurchaseManagementSystem;
 import com.nju.groupPurchaseManagementSystem.ConfigInfos;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
