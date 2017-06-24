@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 public class RMIConfig {
 
     @Resource
-    private GroupPurchaseManagementSystem system;
+    private GroupPurchaseManagementSystemImpl system;
 
     @Bean
     public RmiServiceExporter initRmiServiceExporter() {

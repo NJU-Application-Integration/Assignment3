@@ -1,12 +1,14 @@
 package assignment3;
 
 import com.nju.groupPurchaseManagementSystem.core.vo.GroupPurchaseItem;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.List;
 
 /**
  * Created by Srf on 2017/6/24
  */
+
 public interface GroupPurchaseManagementSystem {
 
     List<GroupPurchaseItem> listGroupPurchase ();
