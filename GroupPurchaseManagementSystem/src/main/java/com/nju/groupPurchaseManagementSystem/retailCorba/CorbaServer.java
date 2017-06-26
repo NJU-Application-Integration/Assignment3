@@ -28,30 +28,38 @@ public class CorbaServer {
 
     public CorbaServer() throws InvalidName, AdapterInactive, ServantNotActive, WrongPolicy, org.omg.CosNaming.NamingContextPackage.InvalidName, NotFound, CannotProceed {
 
-        String args[] = new String[2];
-        args[0] = "-ORBInitialPort";
-        args[1] = "1050";
-        Properties props = new Properties();
-        props.put("org.omg.CORBA.ORBInitialPort", "1050");
-        props.put("org.omg.CORBA.ORBInitialHost", "127.0.0.1");
-        ORB orb = ORB.init(args, props);
+        Thread corbaThread = new Thread(()-> {
+            try {
+                String args[] = new String[2];
+                args[0] = "-ORBInitialPort";
+                args[1] = "1050";
+                Properties props = new Properties();
+                props.put("org.omg.CORBA.ORBInitialPort", "1050");
+                props.put("org.omg.CORBA.ORBInitialHost", "127.0.0.1");
+                ORB orb = ORB.init(args, props);
 
-        POA poa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
-        poa.the_POAManager().activate();
+                POA poa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
+                poa.the_POAManager().activate();
 
-        RetailSystemServiceImpl retailSystem = new RetailSystemServiceImpl();
-        org.omg.CORBA.Object ref = poa.servant_to_reference(retailSystem);
-        RetailSystemService href = RetailSystemServiceHelper.narrow(ref);
+                RetailSystemServiceImpl retailSystem = new RetailSystemServiceImpl();
+                org.omg.CORBA.Object ref = poa.servant_to_reference(retailSystem);
+                RetailSystemService href = RetailSystemServiceHelper.narrow(ref);
 
-        org.omg.CORBA.Object objref = orb.resolve_initial_references("NameService");
-        NamingContextExt ncRef = NamingContextExtHelper.narrow(objref);
+                org.omg.CORBA.Object objref = orb.resolve_initial_references("NameService");
+                NamingContextExt ncRef = NamingContextExtHelper.narrow(objref);
 
-        String name = "Hello";
-        NameComponent[] nc = ncRef.to_name(name);
-        ncRef.rebind(nc, href);
-        System.out.println("CorbaServer ready and waiting......");
+                String name = "Hello";
+                NameComponent[] nc = ncRef.to_name(name);
+                ncRef.rebind(nc, href);
+                System.out.println("CorbaServer ready and waiting......");
 
-        orb.run();
+                orb.run();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        corbaThread.start();
 
     }
 
