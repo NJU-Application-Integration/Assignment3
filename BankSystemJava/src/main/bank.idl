@@ -7,8 +7,10 @@ module Bank {
 	};
 
 	typedef sequence<record> recordList;
+    typedef sequence<string> recordListString;
 
 	interface BankService{
 		recordList listHistory( in string account, in string password);
+		recordListString listInListString( in string account, in string password);
 	};
 };

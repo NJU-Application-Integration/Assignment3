@@ -5,7 +5,7 @@ package Bank;
 * Bank/BankServicePOA.java .
 * 由IDL-to-Java 编译器 (可移植), 版本 "3.2"生成
 * 从./bank.idl
-* 2017年6月28日 星期三 下午01时05分25秒 CST
+* 2017年6月28日 星期三 下午04时16分13秒 CST
 */
 
 public abstract class BankServicePOA extends org.omg.PortableServer.Servant
@@ -18,6 +18,7 @@ public abstract class BankServicePOA extends org.omg.PortableServer.Servant
   static
   {
     _methods.put ("listHistory", new java.lang.Integer (0));
+    _methods.put ("listInListString", new java.lang.Integer (1));
   }
 
   public org.omg.CORBA.portable.OutputStream _invoke (String $method,
@@ -39,6 +40,17 @@ public abstract class BankServicePOA extends org.omg.PortableServer.Servant
          $result = this.listHistory (account, password);
          out = $rh.createReply();
          Bank.recordListHelper.write (out, $result);
+         break;
+       }
+
+       case 1:  // Bank/BankService/listInListString
+       {
+         String account = in.read_string ();
+         String password = in.read_string ();
+         String $result[] = null;
+         $result = this.listInListString (account, password);
+         out = $rh.createReply();
+         Bank.recordListStringHelper.write (out, $result);
          break;
        }
 

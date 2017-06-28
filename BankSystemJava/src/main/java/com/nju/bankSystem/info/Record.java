@@ -38,5 +38,13 @@ public class Record {
     public void setAmount(double amount) {
         this.amount = amount;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Record{" +
+                "source='" + source + '\'' +
+                ", target='" + target + '\'' +
+                ", amount=" + amount +
+                '}';
+    }
 }

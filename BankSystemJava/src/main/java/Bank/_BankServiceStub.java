@@ -5,7 +5,7 @@ package Bank;
 * Bank/_BankServiceStub.java .
 * 由IDL-to-Java 编译器 (可移植), 版本 "3.2"生成
 * 从./bank.idl
-* 2017年6月28日 星期三 下午01时05分25秒 CST
+* 2017年6月28日 星期三 下午04时16分13秒 CST
 */
 
 public class _BankServiceStub extends org.omg.CORBA.portable.ObjectImpl implements Bank.BankService
@@ -31,6 +31,27 @@ public class _BankServiceStub extends org.omg.CORBA.portable.ObjectImpl implemen
                 _releaseReply ($in);
             }
   } // listHistory
+
+  public String[] listInListString (String account, String password)
+  {
+            org.omg.CORBA.portable.InputStream $in = null;
+            try {
+                org.omg.CORBA.portable.OutputStream $out = _request ("listInListString", true);
+                $out.write_string (account);
+                $out.write_string (password);
+                $in = _invoke ($out);
+                String $result[] = Bank.recordListStringHelper.read ($in);
+                return $result;
+            } catch (org.omg.CORBA.portable.ApplicationException $ex) {
+                $in = $ex.getInputStream ();
+                String _id = $ex.getId ();
+                throw new org.omg.CORBA.MARSHAL (_id);
+            } catch (org.omg.CORBA.portable.RemarshalException $rm) {
+                return listInListString (account, password        );
+            } finally {
+                _releaseReply ($in);
+            }
+  } // listInListString
 
   // Type-specific CORBA::Object operations
   private static String[] __ids = {
