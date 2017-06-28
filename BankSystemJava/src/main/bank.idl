@@ -1,0 +1,14 @@
+module Bank {
+
+	valuetype record {
+		public string source;
+		public string target;
+		public double amount;
+	};
+
+	typedef sequence<record> recordList;
+
+	interface BankService{
+		recordList listHistory( in string account, in string password);
+	};
+};
