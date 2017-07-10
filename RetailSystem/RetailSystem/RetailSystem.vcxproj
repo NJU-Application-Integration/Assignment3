@@ -10,8 +10,33 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <Library Include="RetailSystem_vc10_md.lib" />
+    <Library Include="RetailSystem_vc10_mdd.lib" />
+    <Library Include="RetailSystem_vc10_mt.lib" />
+    <Library Include="RetailSystem_vc10_mtd.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RemoteBankSystem.h" />
+    <ClInclude Include="RemoteGroupPurchaseManagementSystem.h" />
+    <ClInclude Include="RetailSystem.h" />
+    <ClInclude Include="RSCorba.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bankSK.cc" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="RemoteBankSystem.cpp" />
+    <ClCompile Include="RemoteGroupPurchaseManagementSystem.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">__WIN32__;__x86__;_WIN32_WINNT=0x0400;__NT__;__OSVERSION__=6;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="RSCorba.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bank.hh" />
+    <None Include="retailSystem.hh" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{ACC34E90-D48E-4CC0-A52F-30C2A531167D}</ProjectGuid>
+    <ProjectGuid>{AA76ACBB-4C2B-4B03-9925-A3C7EA49259F}</ProjectGuid>
     <RootNamespace>RetailSystem</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -36,14 +61,25 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ExecutablePath>F:\omniORB-4.1.5\bin\x86_win32;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>H:\rapidjson-master\include;F:\omniORB-4.1.5\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>F:\omniORB-4.1.5\lib\x86_win32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>__WIN32__;__x86__;_WIN32_WINNT=0x0400;__NT__;__OSVERSION__=6;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;mswsock.lib;advapi32.lib;omniORB415_rt.lib;omniDynamic415_rt.lib;omnithread34_rt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -59,24 +95,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <Library Include="RetailSystem_vc10_md.lib" />
-    <Library Include="RetailSystem_vc10_mdd.lib" />
-    <Library Include="RetailSystem_vc10_mt.lib" />
-    <Library Include="RetailSystem_vc10_mtd.lib" />
-    <Library Include="RetailSystem_vc9_md.lib" />
-    <Library Include="RetailSystem_vc9_mdd.lib" />
-    <Library Include="RetailSystem_vc9_mt.lib" />
-    <Library Include="RetailSystem_vc9_mtd.lib" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="RetailSystem.h" />
-    <ClInclude Include="RSCorba.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Client.cpp" />
-    <ClCompile Include="RSCorba.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -13,35 +13,32 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="libfile">
+      <UniqueIdentifier>{3e2354de-b74f-488d-a382-6cff86fa21e0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="RetailSystem_vc9_md.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
-    <Library Include="RetailSystem_vc9_mdd.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
-    <Library Include="RetailSystem_vc9_mt.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
-    <Library Include="RetailSystem_vc9_mtd.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
-    <Library Include="RetailSystem_vc10_md.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
-    <Library Include="RetailSystem_vc10_mdd.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
     <Library Include="RetailSystem_vc10_mt.lib">
-      <Filter>Resource Files</Filter>
+      <Filter>libfile</Filter>
     </Library>
     <Library Include="RetailSystem_vc10_mtd.lib">
-      <Filter>Resource Files</Filter>
+      <Filter>libfile</Filter>
+    </Library>
+    <Library Include="RetailSystem_vc10_mdd.lib">
+      <Filter>libfile</Filter>
+    </Library>
+    <Library Include="RetailSystem_vc10_md.lib">
+      <Filter>libfile</Filter>
     </Library>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RetailSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteBankSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoteGroupPurchaseManagementSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RSCorba.h">
@@ -49,11 +46,24 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="RSCorba.cpp">
+    <ClCompile Include="RemoteBankSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoteGroupPurchaseManagementSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Client.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RSCorba.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bankSK.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="retailSystem.hh" />
+    <None Include="bank.hh" />
   </ItemGroup>
 </Project>

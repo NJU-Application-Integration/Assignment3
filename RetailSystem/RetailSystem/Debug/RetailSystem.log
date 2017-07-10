@@ -1,16 +1,39 @@
-﻿Build started 2017/6/25 0:19:27.
-     1>Project "E:\MyCoding\Assignment3\RetailSystem\RetailSystem\RetailSystem.vcxproj" on node 2 (build target(s)).
+﻿Build started 2017/6/28 16:46:45.
+     1>Project "F:\vs2010workplace\RetailSystem\RetailSystem\RetailSystem.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Debug\RetailSystem.unsuccessfulbuild".
+         Creating "Debug\RetailSystem.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         E:\IDE\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Client.cpp RSCorba.cpp
-         RSCorba.cpp
-     1>e:\ide\vs\omniorb-4.1.5\include\omniorb4\corba_sysdep_trad.h(606): fatal error C1189: #error :  "The byte order of this platform is unknown"
-         Client.cpp
-     1>e:\ide\vs\omniorb-4.1.5\include\omniorb4\corba_sysdep_trad.h(606): fatal error C1189: #error :  "The byte order of this platform is unknown"
-         Generating Code...
-     1>Done Building Project "E:\MyCoding\Assignment3\RetailSystem\RetailSystem\RetailSystem.vcxproj" (build target(s)) -- FAILED.
+         F:\visual studio 2010\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D __WIN32__ /D __x86__ /D _WIN32_WINNT=0x0400 /D __NT__ /D __OSVERSION__=6 /D _MBCS /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt RemoteBankSystem.cpp
+         RemoteBankSystem.cpp
+     1>f:\omniorb-4.1.5\include\omniorb4\stringtypes.h(144): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 f:\visual studio 2010\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>f:\vs2010workplace\retailsystem\retailsystem\rapidjson\document.h(1010): warning C4003: not enough actual parameters for macro 'max'
+     1>f:\vs2010workplace\retailsystem\retailsystem\rapidjson\document.h(1016): warning C4003: not enough actual parameters for macro 'min'
+     1>f:\vs2010workplace\retailsystem\retailsystem\rapidjson\document.h(1017): warning C4003: not enough actual parameters for macro 'max'
+     1>f:\vs2010workplace\retailsystem\retailsystem\rapidjson\document.h(1034): warning C4003: not enough actual parameters for macro 'max'
+     1>f:\vs2010workplace\retailsystem\retailsystem\rapidjson\document.h(1035): warning C4003: not enough actual parameters for macro 'max'
+     1>f:\vs2010workplace\retailsystem\retailsystem\remotebanksystem.cpp(25): warning C4018: '<' : signed/unsigned mismatch
+         All outputs are up-to-date.
+       Link:
+         F:\visual studio 2010\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\vs2010workplace\RetailSystem\Debug\RetailSystem.exe" /NOLOGO ws2_32.lib mswsock.lib advapi32.lib omniORB415_rt.lib omniDynamic415_rt.lib omnithread34_rt.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\RetailSystem.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\vs2010workplace\RetailSystem\Debug\RetailSystem.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\vs2010workplace\RetailSystem\Debug\RetailSystem.lib" /MACHINE:X86 Debug\bankSK.obj
+         Debug\Client.obj
+         Debug\RemoteBankSystem.obj
+         Debug\RemoteGroupPurchaseManagementSystem.obj
+         Debug\RSCorba.obj
+         RetailSystem_vc10_md.lib
+         RetailSystem_vc10_mdd.lib
+         RetailSystem_vc10_mt.lib
+         RetailSystem_vc10_mtd.lib
+         LINK : F:\vs2010workplace\RetailSystem\Debug\RetailSystem.exe not found or not built by the last incremental link; performing full link
+     1>RetailSystem_vc10_md.lib(RetailSystem.obj) : warning LNK4099: PDB 'vc100.pdb' was not found with 'RetailSystem_vc10_md.lib(RetailSystem.obj)' or at 'F:\vs2010workplace\RetailSystem\Debug\vc100.pdb'; linking object as if no debug info
+         RetailSystem.vcxproj -> F:\vs2010workplace\RetailSystem\Debug\RetailSystem.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"F:\vs2010workplace\RetailSystem\Debug\RetailSystem.exe;#1" /manifest Debug\RetailSystem.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\RetailSystem.unsuccessfulbuild".
+         Touching "Debug\RetailSystem.lastbuildstate".
+     1>Done Building Project "F:\vs2010workplace\RetailSystem\RetailSystem\RetailSystem.vcxproj" (build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.45
+Time Elapsed 00:00:02.30
